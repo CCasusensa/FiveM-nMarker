@@ -1,5 +1,3 @@
-----> MAYBE IT NEED SOME OPTIMISATION I DO THAT FROM SCRATCH.
-
 function DrawText3DTest(x,y,z, text)
     local onScreen,_x,_y=World3dToScreen2d(x,y,z)
     local px,py,pz=table.unpack(GetGameplayCamCoords())
@@ -56,17 +54,18 @@ Citizen.CreateThread(function()
 			local myPos = GetEntityCoords(myPed)
 			local coord = Citizen.InvokeNative(0xFA7C7F0AADF25D09, waypoint, Citizen.ResultAsVector())
             local distance = GetDistanceBetweenCoords(myPos.x, myPos.y, myPos.z, coord.x, coord.y, coord.z, false)
-
-            --> if some one can fix the km showed 1000 to 1.0 -> 1.2 ... it will be OP NOICE.
-
-			if distance > 999 then
-				DrawText3DMarker(coord.x, coord.y, myPos.z + 10)
-				DrawText3DTest(coord.x, coord.y, myPos.z + 2, round(distance).. " kilomètres")
-			elseif distance > 0.1 and distance <= 999 then
-				DrawText3DMarker(coord.x, coord.y, myPos.z)
-				DrawText3DTest(coord.x, coord.y, myPos.z, round(distance).. " m")
+            
+            if distance > 999 then
+                roundOverKm = round(distance)  * math.pow(10, -3) --> Thanks to RAMEX_DELTA_GTA for his help.
+                DrawText3DMarker(coord.x, coord.y, myPos.z + 10)
+                DrawText3DTest(coord.x, coord.y, myPos.z + 2, roundOverKm.. " kilomètres")
+            elseif distance > 0.1 and distance <= 999 then
+                DrawText3DMarker(coord.x, coord.y, myPos.z)
+                DrawText3DTest(coord.x, coord.y, myPos.z, round(distance).. " m")
             end
 		end
         Citizen.Wait(0)
     end
 end)
+
+
