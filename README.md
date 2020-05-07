@@ -7,6 +7,7 @@ With this script, no more mini-map needed, i took inspiration from arma3.
 This resource will make your gameplay more immersive no more mini-map needed when you don't use a car you don't need mini-map but this marker helper !
 
 **Installation:**
+
 1 : Drop the file nMarker into your ressource folder.
 
 2 : Add it into your server.cfg.
