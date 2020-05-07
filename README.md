@@ -14,8 +14,6 @@ This resource will make your gameplay more immersive no more mini-map needed whe
 3 : Enjoy !   
 
 **Video :**
-<a href="https://streamable.com/ooc7h6
-" target="_blank"><img src="https://cdn.discordapp.com/attachments/554479498721099787/707660997162303528/Annotation_2020-05-06_195400.jpg" 
-alt="nMarker Showcase" width="1920" height="1080" border="10" /></a>
+[![Watch the video](https://cdn.discordapp.com/attachments/554479498721099787/707660997162303528/Annotation_2020-05-06_195400.jpg)](https://streamable.com/ooc7h6)
 
 HaveFun !
